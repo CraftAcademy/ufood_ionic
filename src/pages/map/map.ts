@@ -25,7 +25,7 @@ export class MapPage {
   ) {}
 
   ionViewDidLoad() {
-    this.showMap();
+    this.showMap(59.346208, 18.0724644);
     this.restaurantsProvider.getRestaurants()
       .subscribe(data => {
         this.restaurants = data.restaurants;
@@ -38,7 +38,7 @@ export class MapPage {
     const options = {center: location, zoom: 15};
     this.map = new google.maps.Map(this.mapRef.nativeElement, options);
     this.addMarker(location, this.map);
-    this.getUserPosition();
+    // this.getUserPosition();
   }
 
   addMarker(position, map){
@@ -46,7 +46,7 @@ export class MapPage {
       position,
       map
     });
-    let content = "<p>This is your current position !</p>";
+    let content = "<p>Yammi!</p>";
     let infoWindow = new google.maps.InfoWindow({
       content: content
     });
