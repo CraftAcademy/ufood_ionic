@@ -1,0 +1,4 @@
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ionic.globals.\A         on line 15 of variables.scss\A \A 10: // rtl styles in your app. For more info, please see:\A 11: // http://ionicframework.com/docs/theming/rtl-support/\A 12: $app-direction: ltr;\A 13: \A 14: \A 15: @import \"ionic.globals\";\A 16: \A 17: \A 18: // Shared Variables\A 19: // --------------------------------------------------\A 20: // To customize the look and feel of this app, you can override"; }
