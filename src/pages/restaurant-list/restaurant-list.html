@@ -9,7 +9,7 @@
 
 <ion-content>
   <ion-list class="accordion-list">
-    <ion-list-header *ngFor="let item of restaurants; let i = index" no-lines no-padding>
+    <ion-list-header *ngFor="let item of restaurants | filterUnique; let i = index" no-lines no-padding>
       <button ion-item (click)="toggleSection(i)" detail-none
               [ngClass]="{'section-active': item.open, 'section': !item.open}">
         <ion-icon item-left name="arrow-forward" *ngIf="!item.open"></ion-icon>
