@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Geolocation ,GeolocationOptions ,Geoposition ,PositionError } from '@ionic-native/geolocation';
 declare var google: any;
 
-import { RestaurantsProvider } from "../../providers/restaurants/restaurants";
+import { RestaurantsProvider } from '../../providers/restaurants/restaurants';
 
 @IonicPage()
 @Component({
