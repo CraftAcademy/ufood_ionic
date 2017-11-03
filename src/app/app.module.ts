@@ -11,6 +11,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {MapPage} from "../pages/map/map";
 import { RestaurantsProvider } from '../providers/restaurants/restaurants';
+import { RouterModule } from '@angular/router';
+import { Angular2TokenService } from 'angular2-token';
+import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { RestaurantsProvider } from '../providers/restaurants/restaurants';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
+    RouterModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,7 +39,10 @@ import { RestaurantsProvider } from '../providers/restaurants/restaurants';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestaurantsProvider,
-    Geolocation
+    Geolocation,
+    Angular2TokenService,
+    UserProvider
+
   ]
 })
 export class AppModule {}
