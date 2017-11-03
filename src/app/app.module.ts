@@ -11,12 +11,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {MapPage} from "../pages/map/map";
 import { RestaurantsProvider } from '../providers/restaurants/restaurants';
+import {RestaurantListPage} from "../pages/restaurant-list/restaurant-list";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     MapPage,
+    RestaurantListPage
 
   ],
   imports: [
@@ -28,7 +30,8 @@ import { RestaurantsProvider } from '../providers/restaurants/restaurants';
   entryComponents: [
     MyApp,
     HomePage,
-    MapPage
+    MapPage,
+    RestaurantListPage
   ],
   providers: [
     StatusBar,
