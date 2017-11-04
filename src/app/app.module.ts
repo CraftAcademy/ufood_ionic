@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {MapPage} from "../pages/map/map";
 import { RestaurantsProvider } from '../providers/restaurants/restaurants';
+import {RestaurantListPage} from "../pages/restaurant-list/restaurant-list";
 import { RouterModule } from '@angular/router';
 import { Angular2TokenService } from 'angular2-token';
 import { UserProvider } from '../providers/user/user';
@@ -20,6 +21,7 @@ import { UserProvider } from '../providers/user/user';
     MyApp,
     HomePage,
     MapPage,
+    RestaurantListPage
 
   ],
   imports: [
@@ -32,7 +34,8 @@ import { UserProvider } from '../providers/user/user';
   entryComponents: [
     MyApp,
     HomePage,
-    MapPage
+    MapPage,
+    RestaurantListPage
   ],
   providers: [
     StatusBar,

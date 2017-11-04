@@ -3,9 +3,10 @@ import {Nav, Platform, AlertController} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
-import {HomePage} from '../pages/home/home';
-import {MapPage} from '../pages/map/map';
 import {Angular2TokenService} from 'angular2-token';
+import { HomePage } from '../pages/home/home';
+import { MapPage } from '../pages/map/map';
+import {RestaurantListPage} from '../pages/restaurant-list/restaurant-list';
 
 @Component({
   templateUrl: 'app.html'
@@ -33,8 +34,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      {title: 'Home', component: HomePage},
-      {title: 'Map', component: MapPage}
+      { title: 'Home', component: HomePage },
+      { title: 'Map', component: MapPage },
+      { title: 'Restaurants', component: RestaurantListPage }
     ];
 
   }

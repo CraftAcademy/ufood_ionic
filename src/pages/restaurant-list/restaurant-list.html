@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Restaurants</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list *ngFor="let restaurant of restaurants">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="/assets/imgs/thumbnail.png">
+      </ion-thumbnail>
+      <h2>{{ restaurant.name }}</h2>
+      <p>{{ resturant.description }}</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

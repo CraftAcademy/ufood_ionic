@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { MapPage} from '../map/map';
-import { Angular2TokenService } from 'angular2-token';
+import {RestaurantListPage} from "../restaurant-list/restaurant-list";
 
 @Component({
   selector: 'page-home',
@@ -22,6 +22,11 @@ export class HomePage {
   goToMapPage() {
     this.navCtrl.push(MapPage);
   }
+
+  goToRestaurantListPage() {
+    this.navCtrl.push(RestaurantListPage)
+  }
+
   loginPopUp() {
     let confirm = this.alertCtrl.create({
       title: 'Login',
