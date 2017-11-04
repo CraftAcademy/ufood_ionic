@@ -22,9 +22,4 @@ export class RestaurantListPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad RestaurantListPage');
   }
-
-  toggleSection(i) {
-    this.restaurants[i].open = !this.restaurants[i].open;
-  }
-
 }

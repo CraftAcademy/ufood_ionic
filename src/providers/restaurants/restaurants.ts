@@ -17,5 +17,4 @@ export class RestaurantsProvider {
       .get(`https://ufoods.herokuapp.com/api/v1/restaurants/${id}`)
       .map(res => res.json());
   }
-
 }

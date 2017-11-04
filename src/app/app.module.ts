@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { Geolocation } from '@ionic-native/geolocation';
 
-import {FilterPipe, MyApp} from './app.component';
+import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -18,8 +18,7 @@ import {RestaurantListPage} from "../pages/restaurant-list/restaurant-list";
     MyApp,
     HomePage,
     MapPage,
-    RestaurantListPage,
-    FilterPipe
+    RestaurantListPage
 
   ],
   imports: [

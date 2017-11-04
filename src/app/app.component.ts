@@ -1,4 +1,4 @@
-import { Component, ViewChild, Pipe, PipeTransform } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -39,17 +39,5 @@ export class MyApp {
 
   openPage(page) {
     this.nav.setRoot(page.component);
-  }
-}
-
-@Pipe({
-  name: 'filterUnique',
-  pure: false
-})
-export class FilterPipe implements PipeTransform {
-
-  transform(value: any, args?: any): any {
-    let uniqueArray = Array.from(new Set(value));
-    return uniqueArray;
   }
 }
