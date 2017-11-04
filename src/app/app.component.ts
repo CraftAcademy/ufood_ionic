@@ -17,6 +17,8 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
+  currentUser: any;
+
   constructor(public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
@@ -78,5 +80,12 @@ export class MyApp {
       });
       confirm.present();
     }
-
+    login(credentials) {
+      this._tokenService
+      .signIn(credentials)
+      .subscribe(
+        res => (this.currentUser = res.json().data),
+        err => console.error('error')
+      );
+    }
   }
