@@ -11,9 +11,11 @@ export class HomePage {
 
   currentUser: any;
 
-  constructor(public navCtrl: NavController, private _tokenService: Angular2TokenService,public alertCtrl: AlertController,) {
+  constructor(public navCtrl: NavController,
+              private _tokenService: Angular2TokenService,
+              public alertCtrl: AlertController,) {
     this._tokenService.init({
-      apiBase: 'https://ufoods.herokuapp.com/'
+      apiBase: 'https://ufoods.herokuapp.com/api/v1'
     });
   }
 
