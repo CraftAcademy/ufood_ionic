@@ -26,7 +26,6 @@ export class MyApp {
               private _tokenService: Angular2TokenService) {
     this._tokenService.init({
       apiBase: 'https://ufoods.herokuapp.com/api/v1/'
-      // apiBase: 'http://localhost:3000/api/v1'
     });
 
     this.initializeApp();

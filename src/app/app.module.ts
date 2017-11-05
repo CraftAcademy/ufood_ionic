@@ -45,7 +45,6 @@ import { UserProvider } from '../providers/user/user';
     Geolocation,
     Angular2TokenService,
     UserProvider
-
   ]
 })
 export class AppModule {}

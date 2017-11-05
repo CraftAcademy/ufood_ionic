@@ -12,11 +12,7 @@ export class HomePage {
   currentUser: any;
 
   constructor(public navCtrl: NavController,
-              private _tokenService: Angular2TokenService,
-              public alertCtrl: AlertController,) {
-    this._tokenService.init({
-      apiBase: 'https://ufoods.herokuapp.com/api/v1'
-    });
+              public alertCtrl: AlertController) {
   }
 
   goToMapPage() {
@@ -25,44 +21,5 @@ export class HomePage {
 
   goToRestaurantListPage() {
     this.navCtrl.push(RestaurantListPage)
-  }
-
-  loginPopUp() {
-    let confirm = this.alertCtrl.create({
-      title: 'Login',
-      inputs: [
-        {
-          name: 'email',
-          placeholder: 'email'
-        },
-        {
-          name: 'password',
-          placeholder: 'password',
-          type: 'password'
-        }
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-          handler: data => {
-          }
-        },
-        {
-          text: 'Login',
-          handler: data => {
-            this.login(data);
-          }
-        }
-      ]
-    });
-    confirm.present();
-  }
-  login(credentials) {
-    this._tokenService
-    .signIn(credentials)
-    .subscribe(
-      res => (this.currentUser = res.json().data),
-      err => console.error('error')
-    );
   }
 }
