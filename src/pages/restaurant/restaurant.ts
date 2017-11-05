@@ -8,6 +8,7 @@ import { RestaurantsProvider } from '../../providers/restaurants/restaurants';
   templateUrl: 'restaurant.html',
 })
 export class RestaurantPage {
+  restaurants: any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
