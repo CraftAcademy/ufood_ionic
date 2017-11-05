@@ -9,11 +9,12 @@ import { RestaurantsProvider } from '../../providers/restaurants/restaurants';
 })
 export class RestaurantPage {
   restaurants: any;
+  id: any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private restaurantsProvider: RestaurantsProvider) {
-    let restaurant = this.restaurantsProvider.getRestaurant(1);
+    let restaurant = this.restaurantsProvider.getRestaurant('id');
     restaurant.subscribe(data => {
       this.restaurants = data.restaurants;
     })

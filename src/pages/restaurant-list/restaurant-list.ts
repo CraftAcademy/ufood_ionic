@@ -22,9 +22,11 @@ export class RestaurantListPage {
   }
 
   ionViewDidLoad() {
+    this.id = this.navParams.get('id');
+    console.log(this.id);
   }
 
-  viewRestaurant() {
-    this.navCtrl.push(RestaurantPage)
+  viewRestaurant(id) {
+    this.navCtrl.push(RestaurantPage, {'id': `${id}`})
   }
 }
