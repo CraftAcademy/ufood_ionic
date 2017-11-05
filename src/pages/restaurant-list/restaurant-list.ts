@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { RestaurantsProvider } from '../../providers/restaurants/restaurants';
+import { RestaurantPage } from '../restaurant/restaurant';
 
 @Component({
   selector: 'page-restaurant-list',
@@ -9,6 +10,7 @@ import { RestaurantsProvider } from '../../providers/restaurants/restaurants';
 })
 export class RestaurantListPage {
   restaurants: any;
+  id: any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -20,6 +22,9 @@ export class RestaurantListPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RestaurantListPage');
+  }
+
+  viewRestaurant() {
+    this.navCtrl.push(RestaurantPage)
   }
 }

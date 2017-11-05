@@ -8,7 +8,7 @@
 
 
 <ion-content>
-  <ion-list *ngFor="let restaurant of restaurants">
+  <ion-list *ngFor="let restaurant of restaurants; let i = index" (click)="viewRestaurant()">
     <ion-item>
       <ion-thumbnail item-start>
         <img src="/assets/imgs/thumbnail.png">

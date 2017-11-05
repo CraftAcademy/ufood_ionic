@@ -13,7 +13,7 @@ export class RestaurantPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private restaurantsProvider: RestaurantsProvider) {
-    let restaurant = this.restaurantsProvider.getRestaurants();
+    let restaurant = this.restaurantsProvider.getRestaurant(1);
     restaurant.subscribe(data => {
       this.restaurants = data.restaurants;
     })

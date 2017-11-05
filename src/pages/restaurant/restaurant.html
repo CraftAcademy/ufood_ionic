@@ -1,12 +1,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>restaurant-page</ion-title>
+    <ion-title>Restaurant</ion-title>
   </ion-navbar>
 
-</ion-header>
-
-
-<ion-content padding>
-  
-</ion-content>
+  <ion-content padding>
+    <ion-list *ngFor="let restaurant of restaurants">
+      <ion-list *ngFor="let menu of restaurant.menu">
+        <ion-list *ngFor="let dish of menu['dishes']">
+          <h2>{{dish.name}}</h2>
+        </ion-list>
+      </ion-list>
+    </ion-list>
+  </ion-content>
