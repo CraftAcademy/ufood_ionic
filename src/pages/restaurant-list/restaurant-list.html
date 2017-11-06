@@ -8,13 +8,13 @@
 
 
 <ion-content>
-  <ion-list *ngFor="let restaurant of restaurants">
+  <ion-list *ngFor="let restaurant of restaurants" (click)="viewRestaurant(restaurant)">
     <ion-item>
       <ion-thumbnail item-start>
         <img src="/assets/imgs/thumbnail.png">
       </ion-thumbnail>
       <h2>{{ restaurant.name }}</h2>
-      <p>{{ resturant.description }}</p>
+      <p>{{ restaurant.description }}</p>
       <button ion-button clear item-end>View</button>
     </ion-item>
   </ion-list>

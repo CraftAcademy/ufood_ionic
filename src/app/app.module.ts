@@ -6,19 +6,21 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import {RestaurantListPage} from "../pages/restaurant-list/restaurant-list";
+import { RestaurantPage } from '../pages/restaurant/restaurant';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {MapPage} from "../pages/map/map";
 import { RestaurantsProvider } from '../providers/restaurants/restaurants';
-import {RestaurantListPage} from "../pages/restaurant-list/restaurant-list";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     MapPage,
-    RestaurantListPage
+    RestaurantListPage,
+    RestaurantPage
 
   ],
   imports: [
@@ -31,7 +33,8 @@ import {RestaurantListPage} from "../pages/restaurant-list/restaurant-list";
     MyApp,
     HomePage,
     MapPage,
-    RestaurantListPage
+    RestaurantListPage,
+    RestaurantPage
   ],
   providers: [
     StatusBar,
